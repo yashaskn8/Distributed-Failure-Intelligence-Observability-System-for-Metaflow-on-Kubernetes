@@ -1,0 +1,29 @@
+{
+  "workflow_id": "TEST-101",
+  "status": "FAILED",
+  "duration_seconds": 19.0,
+  "failed_steps": [
+    "process_data"
+  ],
+  "failure_event": {
+    "category": "APPLICATION_FAILURE",
+    "confidence": 0.9,
+    "evidence": [
+      "Traceback (most recent call last):",
+      "  File \"flow.py\", line 42, in process_data",
+      "ValueError: Invalid data format encountered in record 551",
+      "Container exited with non-zero exit code 1",
+      "Node failed: process_data"
+    ]
+  },
+  "root_cause": {
+    "explanation": "A Python exception occurred in the user-defined Metaflow step code.",
+    "ranked_causes": [
+      "Code raised ValueError: Invalid data format encountered in record 551"
+    ]
+  },
+  "recommendations": [
+    "Investigate the application logic where ValueError is thrown.",
+    "Check the preceding logs for context on the data state."
+  ]
+}

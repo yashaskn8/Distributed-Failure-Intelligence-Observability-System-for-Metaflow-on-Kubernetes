@@ -1,0 +1,15 @@
+[project]
+name = "metaflow-observability"
+version = "0.1.0"
+description = "Distributed Failure Intelligence & Observability System for Metaflow on K8s"
+authors = [
+    {name = "Pranav", email = "test@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+metaflow-debug = "metaflow_debug.cli.main:main"

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "process_name",
+    "ph": "M",
+    "pid": 1,
+    "args": {
+      "name": "Metaflow Run: TEST-DAG"
+    }
+  },
+  {
+    "name": "Argo Node: start",
+    "cat": "orchestration",
+    "ph": "X",
+    "ts": 0,
+    "dur": 10000000,
+    "pid": 1,
+    "tid": 1,
+    "args": {
+      "status": "Succeeded",
+      "pod": "start-pod-123"
+    }
+  },
+  {
+    "name": "K8s Pod: start-pod-123",
+    "cat": "infrastructure",
+    "ph": "X",
+    "ts": 1000000,
+    "dur": 9000000,
+    "pid": 1,
+    "tid": 2,
+    "args": {
+      "status": "Succeeded"
+    }
+  },
+  {
+    "name": "Metaflow Step: start",
+    "cat": "application",
+    "ph": "X",
+    "ts": 2000000,
+    "dur": 8000000,
+    "pid": 1,
+    "tid": 3,
+    "cname": "good",
+    "args": {
+      "step": "start"
+    }
+  },
+  {
+    "name": "Argo Node: process_data",
+    "cat": "orchestration",
+    "ph": "X",
+    "ts": 11000000,
+    "dur": 8000000,
+    "pid": 1,
+    "tid": 1,
+    "args": {
+      "status": "Failed",
+      "pod": "process-data-pod-456"
+    }
+  },
+  {
+    "name": "K8s Pod: process-data-pod-456",
+    "cat": "infrastructure",
+    "ph": "X",
+    "ts": 12000000,
+    "dur": 7000000,
+    "pid": 1,
+    "tid": 2,
+    "args": {
+      "status": "Failed"
+    }
+  },
+  {
+    "name": "Metaflow Step: process_data",
+    "cat": "application",
+    "ph": "X",
+    "ts": 13000000,
+    "dur": 6000000,
+    "pid": 1,
+    "tid": 3,
+    "cname": "terrible",
+    "args": {
+      "step": "process_data"
+    }
+  }
+]
